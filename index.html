@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="jquery.mobile-1.4.3.min.css" />
+		<script src="jquery-2.1.1.min.js"></script>
+		<script src="jquery.mobile-1.4.3.min.js">
+		</script>
+		
+		<lin rel="stylesheet" href="my-custom-theme.css" />
+			<title>Password Protector Pro</title>
+	<!--This is the main page with the slider -->
+	</head>
+	<body>
+		<div data-role="page" id="MenuPage" data-theme="b">
+				<a href="#mypanel" data-rel="open" data-role="button" class="ui-btn ui-btn-inline ui-corner-all ui-icon-bullets ui-btn-icon-left">Menu</a>
+					<div data-role="panel" id="mypanel">
+						<a href="#MenuPage" data-rel="close" data-role="button" class="ui-btn ui-btn-inline ui-corner-all">Close</a>
+							<ul data-role="listview" data-inset="true" style="min-width:210px">
+								<li><a href="#">Reminders</a></li>
+								<li><a href="#">Password Strength</a></li>
+								<li><a href="#">Password Generator</a></li>
+								<li><a href="#">Settings</a></li>
+							</ul>
+					</div>
+				<div data-role="header">
+						<a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-delete ui-btn-icon-left">Delete</a>
+						<a href="#NewAccount" class="ui-btn ui-btn-inline ui-corner-all ui-icon-plus ui-btn-icon-right" data-transition="slide">Add</a>
+					<h1>Accounts</h1>
+				</div>
+			<div data-role="content">
+					<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
+						<li><a href="#AccountInfo" data-role="button" data-transition="slide">Gmail</a></li>
+						<li><a href="#" data-role="button">Facebook</a></li>
+					</ul>
+			</div>
+			<div data-role="footer">
+					<h3>The End</h3>
+			</div>
+		</div>
+		<!--Add account page-->
+		<div data-role="page" id="NewAccount" data-theme="b">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>New Account</h1>
+			</div>
+			<div data-role="content">
+				<script>
+					$('#some-form').submit(function(event) {
+	        			event.preventDefault();
+						var old_accounts = window.localStorage['accounts'];
+						if (typeof old_accounts != 'object') {
+						old_accounts = [];							}
+						old_accounts.push($('#account-name').val());
+						window.localStorage['accounts'] = old_accounts;
+						});
+				</script>
+				<form id="some-form">
+     					<div class="ui-field-contain">
+         					<input type="text" name="account-name" id="acccount-name" value="" placeholder="Account Name" />
+    						<input type="text" name="user-name" id="user-name" value="" placeholder="User Name" />
+    						<input type="password" data-clear-btn="false" name="password" id="password" value="" autocomplete="off" placeholder="Password" />
+    						<input type="password" data-clear-btn="false" name="repeat-password" id="repeat-password" value="" autocomplete="off" placeholder="Repeat Password" />
+    						<input type="url" data-clear-btn="false" name="url" id="url" value="" placeholder="Address for Password Change" />
+    					</div>
+					<input type="submit" value="Save" />
+    			</form>
+			</div>
+		</div>
+		<!--Account Info page-->
+		<div data-role="page" id="AccountInfo" data-theme="b">
+			<div data-role="header" data-add-back-btn="true">
+					<h1>Gmail</h1>
+			</div>
+			<div data-role="content">
+				<ul>
+					<p>Password:</p>
+					<p>Last Changed:</p>
+					<p>Address for Password Change:</p>
+					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
+					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
