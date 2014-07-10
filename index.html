@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		
+		<link rel="stylesheet" href="css/themes/pp.min.css" />
+		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.3.min.css" />
+
+		<script src="jquery-2.1.1.min.js"></script>
+		<script src="jquery.mobile-1.4.3.min.js">
+
+		<link rel="stylesheet" href="themes/pp.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+
+
+		</script>
+		
+		<lin rel="stylesheet" href="my-custom-theme.css" />
+			<title>Password Protector Pro</title>
+	<!--This is the main page with the slider -->
+	</head>
+	<body>
+		<div data-role="page" id="PINPage" data-theme="a">
+			<div data-role="header">
+				<h1>Enter Password</h1>
+			</div>
+			<div data-role="content">
+				<a href="#" class="ui-btn ui-btn-inline">1</a>
+				<button class="ui-btn ui-btn-inline">2</button>
+				<button class="ui-btn ui-btn-inline">3</button>
+				<br></br>
+				<a href="#" class="ui-btn ui-btn-inline">4</a>
+				<button class="ui-btn ui-btn-inline">5</button>
+				<button class="ui-btn ui-btn-inline">6</button>
+				<br></br>
+				<a href="#" class="ui-btn ui-btn-inline">7</a>
+				<button class="ui-btn ui-btn-inline">8</button>
+				<button class="ui-btn ui-btn-inline">9</button>
+				<br></br>
+				<button class="ui-btn ui-btn-inline">0</button>
+				<button class="ui-btn ui-btn-inline"></button>
+				<a href="#MenuPage"class="ui-btn ui-btn-inline">Enter</a>
+			</div>
+		</div>
+		<div data-role="page" id="MenuPage" data-theme="a">
+				<a href="#mypanel" data-rel="open" data-role="button" class="ui-btn ui-btn-inline ui-corner-all ui-icon-bullets ui-btn-icon-left">Menu</a>
+					<div data-role="panel" id="mypanel">
+						<a href="#MenuPage" data-rel="close" data-role="button" class="ui-btn ui-btn-inline ui-corner-all">Close</a>
+							<ul data-role="listview" data-inset="true" style="min-width:210px">
+								<li><a href="#">Reminders</a></li>
+								<li><a href="#PasswordStrength" data-transition="slide">Password Strength</a></li>
+								<li><a href="#">Password Generator</a></li>
+								<li><a href="#">Settings</a></li>
+							</ul>
+					</div>
+			<div data-role="header">
+						<a href="#DeleteAccounts" class="ui-btn ui-btn-inline ui-corner-all ui-icon-delete ui-btn-icon-left" data-transition="slide">Delete</a>
+						<a href="#NewAccount" class="ui-btn ui-btn-inline ui-corner-all ui-icon-plus ui-btn-icon-right" data-transition="slide">Add</a>
+					<h1>Accounts</h1>
+			</div>
+			<div data-role="content">
+					<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
+						<li><a href="#AccountInfo" data-role="button" data-transition="slide"><font><img src="untitled.png"/></font>  Gmail</a></li>
+						<li><a href="#AccountInfoTwo" data-role="button" data-transition="slide"><font><img src="untitled.png"/></font>  Facebook</a></li>
+						<li><a href="#AccountInfoThree" data-role="button" data-transition="slide"><font><img src="untitled1.png"/></font>  Twitter</a></li>
+						<li><a href="#AccountInfoFour" data-role="button" data-transition="slide"><font><img src="untitled0.png"/></font>  Yahoo</a></li>
+						<li><a href="#AccountInfoFive" data-role="button" data-transition="slide"><font><img src="untitled1.png"/></font>  Amazon</a></li>
+					</ul>
+			</div>
+		</div>
+		<!--Add account page-->
+		<div data-role="page" id="NewAccount" data-theme="a">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>New Account</h1>
+			</div>
+			<div data-role="content">
+				<script>
+					$('#some-form').submit(function(event) {
+	        			event.preventDefault();
+						var old_accounts = window.localStorage['accounts'];
+						if (typeof old_accounts != 'object') {
+						old_accounts = [];							}
+						old_accounts.push($('#account-name').val());
+						window.localStorage['accounts'] = old_accounts;
+						});
+				</script>
+				<form id="some-form">
+     					<div class="ui-field-contain">
+         					<input type="text" name="account-name" id="acccount-name" value="" placeholder="Account Name" />
+    						<input type="text" name="user-name" id="user-name" value="" placeholder="User Name" />
+    						<input type="password" data-clear-btn="false" name="password" id="password" value="" autocomplete="off" placeholder="Password" />
+    						<input type="password" data-clear-btn="false" name="repeat-password" id="repeat-password" value="" autocomplete="off" placeholder="Repeat Password" />
+    						<input type="url" data-clear-btn="false" name="url" id="url" value="" placeholder="Address for Password Change" />
+    					</div>
+					<input type="submit" value="Save" />
+    			</form>
+			</div>
+		</div>
+		<!--Account Info page-->
+		<div data-role="page" id="AccountInfo" data-theme="a">
+			<div data-role="header" data-add-back-btn="true">
+					<h1>Gmail</h1>
+			</div>
+			<div data-role="content">
+				<ul>
+					<p>Password:  change_tomato  <font><img src="untitled.png"/></font></p>
+					<p>Last Changed:  1 month ago</p>
+					<p>Address for Password Change:  <a href="https://accounts.google.com/b/0/EditPasswd?hl=en">https://accounts.google.com/b/0/EditPasswd?hl=en</a></p>
+					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
+					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
+				</ul>
+			</div>
+		</div>
+		<div data-role="page" id="AccountInfoTwo" data-theme="a">
+			<div data-role="header" data-add-back-btn="true">
+					<h1>Facebook</h1>
+			</div>
+			<div data-role="content">
+				<ul>
+					<p>Password:  pasta_rock_spruce  <font><img src="untitled.png"/></font></p>
+					<p>Last Changed:  2 weeks ago</p>
+					<p>Address for Password Change:  <a href="https://www.facebook.com/settings?tab=account&section=password&view">https://www.facebook.com/settings?tab=account&section=password&view</a></p>
+					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
+					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
+				</ul>
+			</div>
+		</div>
+		<div data-role="page" id="AccountInfoThree" data-theme="a">
+			<div data-role="header" data-add-back-btn="true">
+					<h1>Twitter</h1>
+			</div>
+			<div data-role="content">
+				<ul>
+					<p>Password:  password  <font><img src="untitled1.png"/></font></p>
+					<p>Last Changed:  7 years ago</p>
+					<p>Address for Password Change:  <a href="https://twitter.com/settings/password">https://twitter.com/settings/password</a></p>
+					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
+					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
+				</ul>
+			</div>
+		</div>
+		<div data-role="page" id="AccountInfoFour" data-theme="a">
+			<div data-role="header" data-add-back-btn="true">
+					<h1>Yahoo</h1>
+			</div>
+			<div data-role="content">
+				<ul>
+					<p>Password:  DSU(#$DJS  <font><img src="untitled0.png"/></font></p>
+					<p>Last Changed:  2 years ago</p>
+					<p>Address for Password Change:  <a href="https://www.yahoo.com/">https://www.yahoo.com/</a></p>
+					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
+					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
+				</ul>
+			</div>
+		</div>
+		<div data-role="page" id="AccountInfoFive" data-theme="a">
+			<div data-role="header" data-add-back-btn="true">
+					<h1>Amazon</h1>
+			</div>
+			<div data-role="content">
+				<ul>
+					<p>Password:  asdf  <font><img src="untitled1.png"/></font></p>
+					<p>Last Changed:  9 years ago</p>
+					<p>Address for Password Change:  <a href="https://www.amazon.com">https://www.amazon.com/</a></p>
+					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
+					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
+				</ul>
+			</div>
+		</div>
+		<div data-role="page" id="DeleteAccounts" data-theme="a">
+			<div data-role="header" data-add-back-btn="true">
+				<a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-delete ui-btn-icon-right ui-btn-right" data-transition="slide">Delete</a>
+				<h1>Delete Accounts</h1>
+			</div>
+			<div data-role="content">
+					<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
+						<label><input type="checkbox" name="Gmail">Gmail</label></li>
+						<label><input type="checkbox" name="Facebook">Facebook</label></li>
+					</ul>
+			</div>
+		</div>
+		<!--Password Strength Page -->
+		<div data-role="page" id="PasswordStrength" data-theme="a">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>Password Strength</h1>
+			</div>
+			<div data-role="content">
+				<p>Enter Password</p>
+				<input type="password" data-clear-btn="false" name="password test" id="password-test" value="" autocomplete="off" placeholder="Enter Password to Test It" />
+				<p>Password Strength:</p>
+				<p>*Bits: <a href="#" data-role="button" data-transition="slide" class="ui-btn ui-btn-inline ui-corner-all ui-icon-info ui-btn-icon-left">Info</a></p>
+			</div>
+		</div>
+		<div data-role="page" id="PasswordGenerator" data-theme="a">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>Password Generator</h1>
+			</div>
+			<div data-role="content">
+				<p>Generate a strong password
+			</div>
+		</div>
+	</body>
+</html>
