@@ -28,7 +28,7 @@
 					<div data-role="panel" id="mypanel" data-theme="a">
 						<a href="#MenuPage" data-rel="close" data-role="button" class="ui-btn ui-btn-inline ui-corner-all">Close</a>
 							<ul data-role="listview" data-inset="true" style="min-width:210px">
-								<li><a href="#">Reminders</a></li>
+								<li><a href="#Reminders" data-transition="slide">Reminders</a></li>
 								<li><a href="#PasswordStrength" data-transition="slide">Password Strength</a></li>
 								<li><a href="#PasswordGenerator" data-transition="slide">Password Generator</a></li>
 								<li><a href="#">Settings</a></li>
@@ -49,7 +49,7 @@
 					</ul>
 			</div>
 		</div>
-		<!--Add account page-->
+	<!--Add account page-->
 		<div data-role="page" id="NewAccount" data-theme="a">
 			<div data-role="header" data-add-back-btn="true">
 				<h1>New Account</h1>
@@ -77,19 +77,17 @@
     			</form>
 			</div>
 		</div>
-		<!--Account Info page-->
+	<!--Account Info pages-->
 		<div data-role="page" id="AccountInfo" data-theme="a">
 			<div data-role="header" data-add-back-btn="true">
 					<h1>Gmail</h1>
 			</div>
 			<div data-role="content">
-				<ul>
 					<p>Password:  change_tomato  <font><img src="untitled.png"/></font></p>
 					<p>Last Changed:  1 month ago</p>
 					<p>Address for Password Change:  <a href="https://accounts.google.com/b/0/EditPasswd?hl=en" style="color: black">https://accounts.google.com/b/0/EditPasswd?hl=en</a></p>
 					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
 					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
-				</ul>
 			</div>
 		</div>
 		<div data-role="page" id="AccountInfoTwo" data-theme="a">
@@ -97,13 +95,11 @@
 					<h1>Facebook</h1>
 			</div>
 			<div data-role="content">
-				<ul>
 					<p>Password:  pasta_rock_spruce  <font><img src="untitled.png"/></font></p>
 					<p>Last Changed:  2 weeks ago</p>
 					<p>Address for Password Change:  <a href="https://www.facebook.com/settings?tab=account&section=password&view" style="color: black">https://www.facebook.com/settings?tab=account&section=password&view</a></p>
 					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
 					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
-				</ul>
 			</div>
 		</div>
 		<div data-role="page" id="AccountInfoThree" data-theme="a">
@@ -111,13 +107,11 @@
 					<h1>Twitter</h1>
 			</div>
 			<div data-role="content">
-				<ul>
 					<p>Password:  password  <font><img src="untitled1.png"/></font></p>
 					<p>Last Changed:  7 years ago</p>
 					<p>Address for Password Change:  <a href="https://twitter.com/settings/password" style="color: black">https://twitter.com/settings/password</a></p>
 					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
 					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
-				</ul>
 			</div>
 		</div>
 		<div data-role="page" id="AccountInfoFour" data-theme="a">
@@ -125,13 +119,11 @@
 					<h1>Yahoo</h1>
 			</div>
 			<div data-role="content">
-				<ul>
 					<p>Password:  DSU(#$DJS  <font><img src="untitled0.png"/></font></p>
 					<p>Last Changed:  2 years ago</p>
 					<p>Address for Password Change:  <a href="https://www.yahoo.com/" style="color: black">https://www.yahoo.com/</a></p>
 					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
 					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
-				</ul>
 			</div>
 		</div>
 		<div data-role="page" id="AccountInfoFive" data-theme="a">
@@ -139,13 +131,11 @@
 					<h1>Amazon</h1>
 			</div>
 			<div data-role="content">
-				<ul>
 					<p>Password:  asdf  <font><img src="untitled1.png"/></font></p>
 					<p>Last Changed:  9 years ago</p>
 					<p>Address for Password Change:  <a href="https://www.amazon.com" style="color: black">https://www.amazon.com/</a></p>
 					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
 					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
-				</ul>
 			</div>
 		</div>
 		<div data-role="page" id="DeleteAccounts" data-theme="a">
@@ -160,7 +150,7 @@
 					</ul>
 			</div>
 		</div>
-		<!--Password Strength Page -->
+	<!--Password Strength Page -->
 		<div data-role="page" id="PasswordStrength" data-theme="a">
 			<div data-role="header" data-add-back-btn="true">
 				<h1>Password Strength</h1>
@@ -172,16 +162,35 @@
 				<p><a href="#" data-role="button" data-transition="slide" class="ui-btn ui-btn-inline ui-corner-all ui-icon-info ui-btn-icon-notext"></a>Bits:</p>
 			</div>
 		</div>
-		<!-- Pssword Generator -->
+	<!-- Pssword Generator -->
 		<div data-role="page" id="PasswordGenerator" data-theme="a">
 			<div data-role="header" data-add-back-btn="true">
 				<h1>Password Generator</h1>
 			</div>
 			<div data-role="content">
 				<input type="text" name="password-generator" id="acccount-generator" value="" />
-					<label><input type="checkbox" name="Gmail">Needs a Number</label></li>
-					<label><input type="checkbox" name="Facebook">Needs a Symbol</label></li>
+					<label><input type="checkbox" name="Number">Needs a Number</label></li>
+					<label><input type="checkbox" name="Symbol">Needs a Symbol</label></li>
 				<input type="submit" value="Generate a Password" />
+			</div>
+		</div>
+	<!--Reminders Page -->
+		<div data-role="page" id="Reminders" data-theme="a">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>Reminders</h1>
+			</div>
+			<div data-role="content">
+				<h2 style="text-align: center">Set Reminder For:</h2>
+					<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
+						<form>
+    						<fieldset data-role="controlgroup">
+							<label><input type="checkbox" name="Gmail-Select">Gmail</label></li>
+							<label><input type="checkbox" name="Facebook-Select">Facebook</label></li>
+							<label><input type="checkbox" name="Twitter-Select">Twitter</label></li>
+							<label><input type="checkbox" name="Yahoo-Select">Yahoo</label></li>
+							<label><input type="checkbox" name="Amazon-Select">Amazon</label></li>
+						</form>
+					</ul>
 			</div>
 		</div>
 	</body>
