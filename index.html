@@ -19,24 +19,21 @@
 						<a href="#MenuPage" data-rel="close" data-role="button" class="ui-btn ui-btn-inline ui-corner-all">Close</a>
 							<ul data-role="listview" data-inset="true" style="min-width:210px">
 								<li><a href="#">Reminders</a></li>
-								<li><a href="#">Password Strength</a></li>
+								<li><a href="#PasswordStrength" data-transition="slide">Password Strength</a></li>
 								<li><a href="#">Password Generator</a></li>
 								<li><a href="#">Settings</a></li>
 							</ul>
 					</div>
-				<div data-role="header">
-						<a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-delete ui-btn-icon-left">Delete</a>
+			<div data-role="header">
+						<a href="#DeleteAccounts" class="ui-btn ui-btn-inline ui-corner-all ui-icon-delete ui-btn-icon-left" data-transition="slide">Delete</a>
 						<a href="#NewAccount" class="ui-btn ui-btn-inline ui-corner-all ui-icon-plus ui-btn-icon-right" data-transition="slide">Add</a>
 					<h1>Accounts</h1>
-				</div>
+			</div>
 			<div data-role="content">
 					<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
 						<li><a href="#AccountInfo" data-role="button" data-transition="slide">Gmail</a></li>
 						<li><a href="#" data-role="button">Facebook</a></li>
 					</ul>
-			</div>
-			<div data-role="footer">
-					<h3>The End</h3>
 			</div>
 		</div>
 		<!--Add account page-->
@@ -80,6 +77,30 @@
 					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
 					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
 				</ul>
+			</div>
+		</div>
+		<div data-role="page" id="DeleteAccounts" data-theme="b">
+			<div data-role="header" data-add-back-btn="true">
+				<a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-delete ui-btn-icon-right ui-btn-right" data-transition="slide">Delete</a>
+				<h1>Delete Accounts</h1>
+			</div>
+			<div data-role="content">
+					<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
+						<label><input type="checkbox" name="Gmail">Gmail</label></li>
+						<label><input type="checkbox" name="Facebook">Facebook</label></li>
+					</ul>
+			</div>
+		</div>
+		<!--Password Strength Page -->
+		<div data-role="page" id="PasswordStrength" data-theme="b">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>Password Strength</h1>
+			</div>
+			<div data-role="content">
+				<p>Enter Password</p>
+				<input type="password" data-clear-btn="false" name="password test" id="password-test" value="" autocomplete="off" placeholder="Enter Password to Test It" />
+				<p>Password Strength:</p>
+				<p>*Bits: <a href="#" data-role="button" data-transition="slide" class="ui-btn ui-btn-inline ui-corner-all ui-icon-info ui-btn-icon-left">Info</a></p>
 			</div>
 		</div>
 	</body>
