@@ -23,14 +23,36 @@
 	<!--This is the main page with the slider -->
 	</head>
 	<body>
+		<div data-role="page" id="PINPage" data-theme="a">
+			<div data-role="header">
+				<h1>Enter Password</h1>
+			</div>
+			<div data-role="content">
+				<a href="#" class="ui-btn ui-btn-inline">1</a>
+				<button class="ui-btn ui-btn-inline">2</button>
+				<button class="ui-btn ui-btn-inline">3</button>
+				<br></br>
+				<a href="#" class="ui-btn ui-btn-inline">4</a>
+				<button class="ui-btn ui-btn-inline">5</button>
+				<button class="ui-btn ui-btn-inline">6</button>
+				<br></br>
+				<a href="#" class="ui-btn ui-btn-inline">7</a>
+				<button class="ui-btn ui-btn-inline">8</button>
+				<button class="ui-btn ui-btn-inline">9</button>
+				<br></br>
+				<button class="ui-btn ui-btn-inline">0</button>
+				<button class="ui-btn ui-btn-inline"></button>
+				<a href="#MenuPage"class="ui-btn ui-btn-inline">Enter</a>
+			</div>
+		</div>
 		<div data-role="page" id="MenuPage" data-theme="a">
 				<a href="#mypanel" data-rel="open" data-role="button" class="ui-btn ui-btn-inline ui-corner-all ui-icon-bullets ui-btn-icon-left">Menu</a>
-					<div data-role="panel" id="mypanel" data-theme="a">
+					<div data-role="panel" id="mypanel">
 						<a href="#MenuPage" data-rel="close" data-role="button" class="ui-btn ui-btn-inline ui-corner-all">Close</a>
 							<ul data-role="listview" data-inset="true" style="min-width:210px">
 								<li><a href="#Reminders" data-transition="slide">Reminders</a></li>
 								<li><a href="#PasswordStrength" data-transition="slide">Password Strength</a></li>
-								<li><a href="#PasswordGenerator" data-transition="slide">Password Generator</a></li>
+								<li><a href="#">Password Generator</a></li>
 								<li><a href="#">Settings</a></li>
 							</ul>
 					</div>
@@ -41,11 +63,11 @@
 			</div>
 			<div data-role="content">
 					<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
-						<li><a href="#AccountInfo" data-role="button" data-transition="slide"><font><img src="untitled.png"/></font>  Gmail</a></li>
-						<li><a href="#AccountInfoTwo" data-role="button" data-transition="slide"><font><img src="untitled.png"/></font>  Facebook</a></li>
-						<li><a href="#AccountInfoThree" data-role="button" data-transition="slide"><font><img src="untitled1.png"/></font>  Twitter</a></li>
-						<li><a href="#AccountInfoFour" data-role="button" data-transition="slide"><font><img src="untitled0.png"/></font>  Yahoo</a></li>
-						<li><a href="#AccountInfoFive" data-role="button" data-transition="slide"><font><img src="untitled1.png"/></font>  Amazon</a></li>
+						<li><a href="#AccountInfo" data-role="button" data-transition="slide"><font><img src="./untitled.png"/></font>  Gmail</a></li>
+						<li><a href="#AccountInfoTwo" data-role="button" data-transition="slide"><font><img src="./untitled.png"/></font>  Facebook</a></li>
+						<li><a href="#AccountInfoThree" data-role="button" data-transition="slide"><font><img src="./untitled1.png"/></font>  Twitter</a></li>
+						<li><a href="#AccountInfoFour" data-role="button" data-transition="slide"><font><img src="./untitled0.png"/></font>  Yahoo</a></li>
+						<li><a href="#AccountInfoFive" data-role="button" data-transition="slide"><font><img src="./untitled1.png"/></font>  Amazon</a></li>
 					</ul>
 			</div>
 		</div>
@@ -84,8 +106,9 @@
 			</div>
 			<div data-role="content">
 					<p>Password:  change_tomato  <font><img src="untitled.png"/></font></p>
+
 					<p>Last Changed:  1 month ago</p>
-					<p>Address for Password Change:  <a href="https://accounts.google.com/b/0/EditPasswd?hl=en" style="color: black">https://accounts.google.com/b/0/EditPasswd?hl=en</a></p>
+					<p>Address for Password Change:  <a href="https://accounts.google.com/b/0/EditPasswd?hl=en">https://accounts.google.com/b/0/EditPasswd?hl=en</a></p>
 					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
 					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
 			</div>
@@ -97,7 +120,7 @@
 			<div data-role="content">
 					<p>Password:  pasta_rock_spruce  <font><img src="untitled.png"/></font></p>
 					<p>Last Changed:  2 weeks ago</p>
-					<p>Address for Password Change:  <a href="https://www.facebook.com/settings?tab=account&section=password&view" style="color: black">https://www.facebook.com/settings?tab=account&section=password&view</a></p>
+					<p>Address for Password Change:  <a href="https://www.facebook.com/settings?tab=account&section=password&view">https://www.facebook.com/settings?tab=account&section=password&view</a></p>
 					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
 					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
 			</div>
@@ -109,7 +132,7 @@
 			<div data-role="content">
 					<p>Password:  password  <font><img src="untitled1.png"/></font></p>
 					<p>Last Changed:  7 years ago</p>
-					<p>Address for Password Change:  <a href="https://twitter.com/settings/password" style="color: black">https://twitter.com/settings/password</a></p>
+					<p>Address for Password Change:  <a href="https://twitter.com/settings/password">https://twitter.com/settings/password</a></p>
 					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
 					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
 			</div>
@@ -121,7 +144,7 @@
 			<div data-role="content">
 					<p>Password:  DSU(#$DJS  <font><img src="untitled0.png"/></font></p>
 					<p>Last Changed:  2 years ago</p>
-					<p>Address for Password Change:  <a href="https://www.yahoo.com/" style="color: black">https://www.yahoo.com/</a></p>
+					<p>Address for Password Change:  <a href="https://www.yahoo.com/">https://www.yahoo.com/</a></p>
 					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
 					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
 			</div>
@@ -133,7 +156,7 @@
 			<div data-role="content">
 					<p>Password:  asdf  <font><img src="untitled1.png"/></font></p>
 					<p>Last Changed:  9 years ago</p>
-					<p>Address for Password Change:  <a href="https://www.amazon.com" style="color: black">https://www.amazon.com/</a></p>
+					<p>Address for Password Change:  <a href="https://www.amazon.com">https://www.amazon.com/</a></p>
 					<p>New Password:<input type="password" data-clear-btn="false" name="New Password" id="new-password" value="" autocomplete="off" /></p>
 					<p>Repeat New Password:<input type="password" data-clear-btn="false" name="Repeat New Password" id="repeat-new-password" value="" autocomplete="off"></p>
 			</div>
@@ -159,7 +182,7 @@
 				<p>Enter Password</p>
 				<input type="password" data-clear-btn="false" name="password test" id="password-test" value="" autocomplete="off" placeholder="Enter Password to Test It" />
 				<p>Password Strength:</p>
-				<p><a href="#" data-role="button" data-transition="slide" class="ui-btn ui-btn-inline ui-corner-all ui-icon-info ui-btn-icon-notext"></a>Bits:</p>
+				<p>*Bits: <a href="#" data-role="button" data-transition="slide" class="ui-btn ui-btn-inline ui-corner-all ui-icon-info ui-btn-icon-left">Info</a></p>
 			</div>
 		</div>
 	<!-- Pssword Generator -->
